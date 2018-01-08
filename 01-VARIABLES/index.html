@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Variables</title>
+</head>
+<body>
+  <script>
+
+console.log('Link to exercice: https://github.com/becodeorg/Hamilton-promo-3/blob/master/Parcours/05-JavaScript/01-VARIABLES/exercices.md')
+
+// Exercice 1: Diseur de bonne aventure
+  /*Déclarez les variables suivantes:
+
+  nombre d'enfants
+  nom d'une femme
+  un pays
+  métier
+  Afficher dans la console :
+
+  Vous serez X et habiterez à Y, et marié a Z avec N enfants.*/
+    let numberKids = 4;
+    let womenName = 'Christina';
+    let country = 'Japon';
+    let job = 'père au foyer';
+
+    console.log('Vous serez ' + job + ' et habiterez au ' + country + ', et marié à ' + womenName + ' avec ' + numberKids + ' enfants.');
+
+// Exerrcice 2: Calculer l'age
+  /*Déclarez les variables suivantes :
+
+  L'année courante
+  L'année de naissance d'une personne
+  Afficher dans la consol l'âge de cette personne*/
+    let thisYear = 2018;
+    let birthDate = 1996;
+    console.log('This person is ' + (thisYear - birthDate));
+
+// Exercice 3: Bientôt vieux
+  /*Déclarez les variables suivantes :
+
+  Votre âge
+  Un âge maximum, esperons tous vivre 100ans
+  Une denrée alimentaire
+  Votre consomation de cette denrée par jour
+  Calculer le nombre de fois que vous en mangerez pour le restant de votre vie.
+
+  Mettez le resultat dans la console comme ceci :
+
+  Il vous reste N de X avant d'ateindre l'age de Y ans"*/
+    let age = 21;
+    let maxAge = 100;
+    let food = 'biscuits';
+    let numberFoodPerDay = 5;
+
+    let restOfFood = numberFoodPerDay * (maxAge - age);
+
+    console.log('Il vous reste ' + restOfFood + ' de ' + food + ' avant d\'atteindre l\'age de ' + maxAge + ' ans.');
+
+
+// Exercice 4: Priorités
+  /*Décomposer la résolution du calcul suivant :*/
+
+    var result = (1 + 2) * 3 + 4 / 2;
+
+    // étape 1 : 3 * 3 + 4 / 2;
+    // étape 2 : 9 + 2;
+    // étape 3 : 11;
+
+    console.log(result);
+
+console.log('------------------------------------------------------')
+  </script>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
