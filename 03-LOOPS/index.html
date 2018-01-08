@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03-Loops</title>
+</head>
+<body>
+  <p>% = modulus</p>
+  <script>
+
+//Exercice 1: Pai et impair
+
+let max = 20;
+
+for (let i = 0; i <= max; i++) {
+  if (i%2 === 0 /*pair*/) {
+    console.log(i + ' est pair')
+  } else if (i%2 === 1 /*impair*/) {
+    console.log(i + ' est impair')
+  }
+};
+
+//Exercice 2: Multiplication Tables
+
+let max2 = 10;
+
+for (let i = 0; i <= max2; i++) {
+  console.log(i + '*9 = ' + (i*9));
+};
+
+//Exercice 3: Assigner des grades
+
+let max3 = 100;
+let i = 1;
+let result ;
+
+
+while (i <= max3) {
+  if (i > 90) {
+    result = 'Pour ' + i + ' vous avez le grade A';
+  } else if (i > 80) {
+    result = 'Pour ' + i + ' vous avez le grade B';
+  } else if (i > 70) {
+    result = 'Pour ' + i + ' vous avez le grade C';
+  } else if (i > 65) {
+    result = 'Pour ' + i + ' vous avez le grade D';
+  } else {
+    result = 'Pour ' + i + ' vous avez le grade F';
+  }
+  i++;
+  console.log(result);
+};
+
+//Exercice 4: Pyramide
+
+let star = "*";
+
+for (let i = 1; i <= 5; i++) {
+  console.log(star.repeat(i));
+};
+
+
+let pyramide = '';
+
+for (let i = 0; i <= 5; i++) {
+  pyramide = pyramide + '*';
+  console.log(pyramide);
+};
+
+
+  </script>
+</body>
+</html>
