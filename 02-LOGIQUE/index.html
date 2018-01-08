@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>02-Logique</title>
+</head>
+<body>
+
+  <script>
+
+
+//Exercice 1: Langues
+
+let language = 'es';
+let message ;
+
+if (language === 'fr') {
+  message = "Bonjour tout le monde";
+} else if (language === 'es') {
+  message = 'Hola, Mundo';
+} else if (language === 'en') {
+  message = 'Hello World';
+}
+console.log(message);
+
+//Exercice 2: Affichage des scores
+
+let score = 70;
+let result ;
+
+if (score >= 90) {
+  result = "Rang A"
+} else if (score <= 50) {
+  result = "Rang C"
+} else if (score < 90) {
+  result = "Rang B"
+}
+console.log(result);
+
+//Exercice 3: Mettre au pluriel
+
+let singular = 'chien';
+let number = 3;
+let end ;
+
+if (number === 1) {
+  end = 'Je possède ' + number + ' ' + singular;
+} else {
+  end = 'Je possède ' + number + ' ' + singular + 's';
+}
+console.log(end);
+
+
+console.log('------------------------------------------')
+  </script>
+  <script src="main.js"></script>
+
+</body>
+</html>
