@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>05-Arrays</title>
+</head>
+<body>
+  <script>
+//Exercice 1: addition
+let value = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let result = 0;
+
+for (let i = 0; i < value.length; i++) {
+  // result = result + value[i];
+  result += value[i]; //short version
+}
+console.log(result);
+
+// value.reduce((a, b) => a+b,0);
+// console.log(value);
+
+
+//Exercice 2: Vos meilleurs choix
+
+//mine
+let actors = ['Chris', 'Jacques', 'Jean'];
+
+for (let i = 0; i < actors.length; i++) {
+  let word = i;
+  if (i === 0) {
+    word = 'premier';
+  } else if (i === 1) {
+    word = 'deuxième';
+  } else {
+    word = 'troisième';
+  }
+  console.log('Le ' + word + ' est ' + actors[i]);
+};
+
+//thomas
+actors.forEach((element, iterator) => console.log('Le ' + (iterator+1) + ' est ' + element));
+
+
+//laurent
+//+ let actors above
+let position = ['premier', 'deuxième', 'troisième'];
+let text = textBonus = '';
+
+actors.forEach(function(item, index) {
+  text += 'Le numéro ' + (index + 1) + ' est ' + item + '\n';
+  textBonus += 'La ' + position[index] + ' est ' + item + '\n';
+})
+
+console.log(text);
+console.log(textBonus);
+
+//Exercice 3: Clone
+let nintendo = ['Mario', 'Luigi', 'Peach'];
+
+let copyNintendo = nintendo.slice();
+copyNintendo.push('Bowser');
+
+console.log(nintendo);
+console.log(copyNintendo);
+
+
+
+console.log('-----------------------------------------')
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

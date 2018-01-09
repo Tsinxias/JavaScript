@@ -13,30 +13,30 @@
 //Exercice: Calculs
 
 //1
-let sub = function(number, substraction) {
+let minus = function(number, substraction) {
   return number - substraction;
 }
 
-console.log(sub(50, 6));
+console.log(minus(50, 6));
 
 //2
-let div = function(number, division) {
+let divide = function(number, division) {
   return number / division;
-  console.log(result);
 }
 
-console.log(div(50, 6));
+console.log(divide(50, 6));
 
 //3
-let multi = function(number, multiplication) {
+let multiply = function(number, multiplication) {
   return number * multiplication;
 }
 
-console.log(multi(50, 6));
+console.log(multiply(50, 6));
 
 //4
 let percentage = function(valeur, pourcentage) {
-  return pourcentage + '% de ' + valeur + ' = ' + (valeur*pourcentage/100);
+  let calcul = valeur*pourcentage/100;
+  return pourcentage + '% de ' + valeur + ' = ' + calcul;
 }
 
 console.log(percentage(50, 6));
