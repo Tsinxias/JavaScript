@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>08-Objects</title>
+</head>
+<body>
+
+  <script>
+
+//Exercice 1: PNJ_Personnage non-joueur
+
+let Character = {
+  name : 'Tsiny',
+  age : 21,
+  items_to_give : ['Axe', 'Sword', 'Dagger', 'Scepter'],
+}
+
+for(properties in Character) {
+  console.log(Character[properties])
+}
+
+let giveItem = function() {
+  let itemsGiven = Character.items_to_give.length
+  let randomize = Math.floor(Math.random()*itemsGiven);
+  let equipment = Character.items_to_give[randomize];
+  console.log(Character.name + ' has received a(n) ' + equipment);
+}
+
+giveItem();
+
+
+//Exercice2 : Shop
+
+let weapon = [{
+  title : 'Dagger',
+  physic : 15,
+  magic : 5,
+  minLevel : 0,
+  available : true,
+},
+{
+  title : 'Sword',
+  physic : 25,
+  magic : 7,
+  minLevel : 4,
+  available : true,
+},
+{
+  title : 'Axe',
+  physic : 45,
+  magic : 10,
+  minLevel : 7,
+  available : false,
+},
+{
+  title : 'Scepter',
+  physic : 15,
+  magic : 60,
+  minLevel : 10,
+  available : false,
+}];
+
+let show = function() {
+  console.log('All weapons: ');
+  for (properties in weapon) {
+    console.log(weapon[properties]['title']);
+  }
+  console.log('*************')
+};
+
+
+let dispo = function() {
+  console.log('Weapons available: ')
+  for (properties in weapon) {
+    if(weapon[properties]['available'] === true) {
+      console.log(weapon[properties]['title']);
+    }
+  }
+  console.log('*************')
+}
+
+
+let level10 = function() {
+  console.log('Level 10+ weapon(s)')
+  for (properties in weapon) {
+    if (weapon[properties]['minLevel'] === 10) {
+      console.log(weapon[properties]['title']);
+    }
+  }
+  console.log('*************')
+}
+
+show();
+dispo();
+level10();
+
+
+//Exercice 3: Personnage
+
+let mainCharacter = {
+  name : 'Tsiny',
+  level : 10,
+  life : 105,
+  weapon : {
+    name : 'Bow',
+    damage : 60,
+  },
+  attack : function() {
+    return this.name + ' attacks with weapon ' + this.weapon.name + ', the damages are ' + (this.level*this.weapon.damage) + '. \nIt\'s super effective!'
+  }
+}
+
+console.log(mainCharacter.attack());
+console.log('*************')
+
+
+//Exercice 4: Bonus adversaire
+
+
+function Hero(name, level, life, weapon) {
+  this.name = name;
+  this.level = level;
+  this.life = life;
+  this.weapon = {
+    weaponName : 'Black Orichalque long dagger',
+    weaponDamage : 250
+  }
+}
+
+Hero.prototype.attack = function(opponent) {
+  let attackDescription = this.name + ' attacks ' + opponentCharacter.name + ' with the ' + this.weapon['weaponName'] + ' and inflics ' + (this.level*this.weapon['weaponDamage']) + ' damages. ' + opponentCharacter.name + ' now has ' + opponentCharacter.life + ' life left.'
+  return attackDescription;
+}
+
+let opponentCharacter = new Hero('Chris', 45, 2500);
+let myHero = new Hero('Himedoll', 55, 1750)
+
+console.log(myHero.attack())
+
+
+// let Hero = {
+//   init : function(name, level, life, weapon) {
+//     this.name = name;
+//     this.level = level;
+//     this.life = life;
+//     this.weapon = {
+//       name : 'weaponName',
+//       damage : 'damagerName'
+//     }
+//   },
+//   attack : function() {
+//     return this.name + ' attacks ' + this.name + '\nwith the weapon ' + this[weapon]['name'] + '\nand inflics ' + (this.level*this[weapon]['damage']) + ' of damage\n' + opponent + ' now has ' + this.life + ' life left';
+//   },
+// }
+//
+// let opponentCharacter = Object.create(Hero);
+// opponentCharacter.init('Chris', 45, 550, 'White Angel Scepter', 150)
+//
+// console.log(opponentCharacter.attack());
+// Hero.attack(opponentCharacter);
+//
+// // let mainCharacter
+//
+//
+// // 'Black Orichalque long dagger'
+// // 250
+//
+console.log('-----------------------------------------')
+  </script>
+
+  <!-- <script src="main.js"></script> -->
+</body>
+</html>
