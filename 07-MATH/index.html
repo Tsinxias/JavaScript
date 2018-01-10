@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>07-Math</title>
+</head>
+<body>
+  <script>
+
+// Exercice 1: Min et max
+
+let minimum = Math.min(7, 5, -12, 6, 32, 18, 14, -2);
+let maximum = Math.max(-3, 9, 21, 36, 27, 54, 17, 35);
+let calcul = minimum + maximum;
+
+console.log('Le minimum est ' + minimum);
+console.log('Le maximum est ' + maximum);
+console.log('L\'addition des 2 est ' + calcul);
+
+// Exercice 2: Aléatoire 1
+
+let floatBateau = 10.4;
+let couleBateau = Math.floor(floatBateau);
+let voleBateau = Math.ceil(floatBateau);
+
+console.log('Le nombre est ' + floatBateau);
+console.log('Arrondi en dessous: ' + couleBateau);
+console.log('Arrondi au dessus: ' + voleBateau);
+
+// Exercice 3: Aléatoire 2
+
+let cinquanteCent = Math.floor(Math.random()*51) + 50;
+let zeroUn = Math.floor(Math.random()*2);
+let zeroDixInclu = Math.ceil(Math.random()*10);
+
+console.log('5 nombres aléatoire en 50 et 100: ');
+for (var i = 0; i < 5; i++) {
+  let cinquanteCent = Math.floor(Math.random()*51) + 50;
+  console.log('---' + cinquanteCent);
+}
+console.log('************')
+
+console.log('1 ou 0, Gagnant ou Perdant... Lequel serez-vous ?')
+console.log(zeroUn);
+if (zeroUn === 0) {
+  console.log('YOU LOST BITCH');
+} else {
+  console.log('Oh you won... tch');
+}
+
+console.log('************')
+
+
+console.log('5 nombres aléatoire en 0 et 10: ');
+for (var i = 0; i < 5; i++) {
+  let zeroDixInclu = Math.ceil(Math.random()*10);
+  console.log('--- ' + zeroDixInclu);
+}
+console.log('************')
+
+// Exercice 4: Aléatoire 3
+
+let perso = ['Goro', 'Johnny Cago', 'Kano', 'Liu Kano', 'Raiden', 'Reptil', 'Scorpion', 'Shang Tsun', 'Sonya', 'Sub-Zero'];
+let randomPerso = Math.floor(Math.random()*perso.length);
+let pioche = perso[randomPerso];
+
+console.log(pioche);
+
+
+
+
+
+
+
+console.log('------------------------------------------------------------');
+  </script>
+  <!-- <script src="main.js"></script> -->
+
+</body>
+</html>
