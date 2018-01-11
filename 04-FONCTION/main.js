@@ -25,3 +25,26 @@ function hello(bouh = 'Charlie'/*défault*/) {
 }
 
 console.log(hello("Carla"));
+
+
+
+// Fonction Réversif
+//This is when you call the declared function inside itself
+
+let count = 0;
+
+let increase = function () {
+  count++; //or count +=1 or count = count + 1
+  console.log(count);
+  if (count < 10) {
+    increase();
+  }
+
+  // while (count <10) {
+  //   count++
+  // }
+}
+
+increase ();
+
+console.log(count);
