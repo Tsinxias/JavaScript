@@ -1,0 +1,8 @@
+<data>
+  <name>teddy</name>
+  <name attribute ="children">
+    <child>Emmanuelle</child>
+    <child>Naomi</child>
+  </name>
+  <age>29</age>
+</data>

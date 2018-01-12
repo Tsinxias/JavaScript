@@ -62,13 +62,14 @@ li.innerHTML = "Mon meilleur ami est <a href='http://www.google.com'>Google</a> 
 ulFirst.appendChild(li);
 
 let link = li.querySelector("a");
+// don't use li.document.querySelector("a") because li is a child of document so it doesn't work
 link.style.color = ("red");
 
 
 //Exo 5 : Création et suppression de plusieurs éléments
 
 let olFirst = document.getElementsByTagName("ol")[0];
-let olChildren = olFirst.children;
+let olChildren = olFirst.children; //get olFirst's children
 
 for (var i = (olChildren.length -1); i >= 0; i--) {
   olFirst.removeChild(olChildren[i]);
