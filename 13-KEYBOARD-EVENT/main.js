@@ -40,6 +40,7 @@ document.body.addEventListener('keypress', function(event) {
       break;
     case 13 :
       character.style.backgroundColor = 'white';
+      character.style.color = "black";
       break;
   }
 }, false);
