@@ -10,13 +10,16 @@
     .box {
       width : 150px;
       height : 150px;
-      background-color: black;
+      background-color: #3B170B;
       margin : 5px;
       display : inline-block;
     }
 
     .bg-red {
-      background-color: red;
+      background-image: url("taupe.jpeg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   </style>
 
@@ -24,6 +27,11 @@
 <body>
 
 <h1>Welcome to 'Whack a Mole'</h1>
+
+<button>Start Game</button>
+
+<h3 id="life">You have 3 lives left</h3>
+<h3 id="scoring">Your score : 0</h3>
 
 
 <div id="one" class="box">&nbsp;</div>
