@@ -4,9 +4,9 @@ let randomize = function() {
   return Math.ceil(Math.random()*9);
 }
 
-let randomTime = function() {
-  return Math.ceil(Math.random()*500)+1500;
-}
+// let randomTime = function() {
+//   return Math.ceil(Math.random()*500)+1500;
+// }
 
 // attributions
 let one = document.getElementById('one');
@@ -29,7 +29,7 @@ let scoring = document.getElementById('scoring');
 let attempt = 3;
 let score = 0;
 
-let button = document.querySelector('button')
+let button = document.querySelector('button');
 
 
 //random colours + click event
@@ -163,7 +163,6 @@ button.addEventListener("click", function () {
   setInterval(colorize, 1000);
   setTimeout(setInterval(miss, 999), 1950); //
 }, false);
-// colorize();
 
 
 // event with numpad
@@ -266,6 +265,7 @@ document.body.addEventListener('keypress', function(event) {
 });
 
 
+// function that is called after the tap time is over
 let miss = function(event) {
   for (var i = 0; i < holes.length; i++) {
     if (holes[i].classList.contains('bg-red')) {
