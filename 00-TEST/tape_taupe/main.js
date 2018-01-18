@@ -26,7 +26,7 @@ let holes = document.getElementsByClassName('box');
 let life = document.getElementById('life');
 let scoring = document.getElementById('scoring');
 
-let attempt = 3;
+let attempt = 5;
 let score = 0;
 
 let button = document.querySelector('button');
@@ -59,7 +59,7 @@ let colorize = function() {
             two.classList.remove('bg-red');
           } else if (!two.classList.contains('bg-red')) {
             attempt--;
-            life.innerText = "You have " + attempt + " lives left"
+            life.innerText = "You have " + attempt + " lives left";
           }
         });
         break;
