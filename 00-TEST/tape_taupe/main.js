@@ -26,7 +26,7 @@ let holes = document.getElementsByClassName('box');
 let life = document.getElementById('life');
 let scoring = document.getElementById('scoring');
 
-let attempt = 5;
+let attempt = 10;
 let score = 0;
 
 let button = document.querySelector('button');
